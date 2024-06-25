@@ -51,4 +51,4 @@ jobs:
         path: kong-backup.yaml
     
     - name: Deploy new declarative configuration to Kong
-      run: deck gateway sync --konnect-addr https://eu.api.konghq.com --konnect-token ${{ secrets.KONNECT_ACCESS_TOKEN }} --konnect-control-plane-name ${{ secrets.KONNECT_CONTROL_PLANE }}
+      run: deck gateway sync kong.yaml --konnect-addr https://eu.api.konghq.com --konnect-token ${{ secrets.KONNECT_ACCESS_TOKEN }} --konnect-control-plane-name ${{ secrets.KONNECT_CONTROL_PLANE }}
