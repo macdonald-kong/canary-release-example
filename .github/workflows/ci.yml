@@ -1,11 +1,24 @@
+# Basic GitHub Actions Pipeline for Kong Konnect demonstrating the canary release plugin
+#
+# Author: David MacDonald
+# Contact: david.macdonald@konghq.com
+# Website: https://konghq.com/
+#
+# DISCLAIMER: DO NOT USE THIS IN PRODUCTION - FOR DEMONSTRATION PURPOSES ONLY
+#
+
 name: CI
 
 on:
+
   push:
     branches: 
-      - main   
+      - main
+
+  workflow_dispatch:
 
 jobs:
+
   deploy-api:
     runs-on: ubuntu-22.04
     name: Deploy API to Kong Konnect Control Plane
